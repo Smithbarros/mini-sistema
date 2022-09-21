@@ -9,6 +9,14 @@ MENU="
 echo "$MENU"
 while [ $opcao -eq $opcao ]; do
     read -p "comando: " opcao
-    
+    case "$opcao" in
+        1)
+            echo "  Atualizacao:"
+            df -h
+            read -p "
+Precione qualquer techa e volte ao menu"
+            clear
+            echo "$MENU"
+         ;;
     esac
 done
