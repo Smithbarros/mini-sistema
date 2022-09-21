@@ -39,5 +39,11 @@ Precione qualquer techa e volte ao menu"
             echo " sair"
             exit 1
          ;;
+         
+         *)
+            echo " invalido"
+            exit 1
+         ;;
+         
     esac
 done
