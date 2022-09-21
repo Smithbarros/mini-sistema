@@ -18,5 +18,15 @@ Precione qualquer techa e volte ao menu"
             clear
             echo "$MENU"
          ;;
+         
+         2)
+            echo " Usuarios:"
+            who
+            read -p "Precione qualquer techa e volte ao menu"
+            clear
+            echo "$MENU"
+         ;;
+         
+         
     esac
 done
