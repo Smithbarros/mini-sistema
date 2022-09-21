@@ -34,5 +34,10 @@ Precione qualquer techa e volte ao menu"
             clear
             echo "$MENU"
          ;;
+         
+         4)
+            echo " sair"
+            exit 1
+         ;;
     esac
 done
