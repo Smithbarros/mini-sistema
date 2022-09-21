@@ -27,6 +27,12 @@ Precione qualquer techa e volte ao menu"
             echo "$MENU"
          ;;
          
-         
+         3)
+            echo " Data e Hora"
+            date
+            read -p "Precione qualquer techa e volte ao menu"
+            clear
+            echo "$MENU"
+         ;;
     esac
 done
