@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test da bransh
 if [ $1 -lt $2 ]
 then
 	echo "$2 eh o maior numero"
