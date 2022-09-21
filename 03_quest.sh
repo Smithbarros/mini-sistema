@@ -1,14 +1,15 @@
 #!/bin/bash
+#Script que receba como parâmetro o caminho de um diretório e liste seus arquivos e diretório um a um.
 
-echo "Digite o caminho de um diretorio"
-read caminho
+echo -n "informe o diretorio: "
+read diretorio
 
-
-for temp in $(ls $caminho); do # DICA: a cada iteracao a variavel será um arquivo dentro do diretorio
-	if [  ] ## DICA: verifique se temp é um diretorio
-	then
-		echo "$temp (dir)"
+l -l $diretorio | while read linha; do
+	if [[${linha : 0 : 1} = "d" ]]; then
+		#statements
+		
+		echo $linha | awk  '{print $9 " (dir)"}'
 	else
-		echo "$temp"
-	fi
+		echo $linha | awk '{print $9}'
+	if
 done
