@@ -7,3 +7,8 @@ MENU="
 4- Sair
 "
 echo "$MENU"
+while [ $opcao -eq $opcao ]; do
+    read -p "comando: " opcao
+    
+    esac
+done
