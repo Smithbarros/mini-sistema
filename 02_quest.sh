@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 2º questão
+#Elaborar um script que solicite a informação de um nome de usuário e verifique se o nome informado é um usuário válido no sistema (desconsiderando as diferenças entre maiúsculas e minúsculas). 
+
+
 echo "Informe o usuário: "
 read nome
 
