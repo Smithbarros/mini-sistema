@@ -13,3 +13,21 @@ l -l $diretorio | while read linha; do
 		echo $linha | awk '{print $9}'
 	if
 done
+
+
+
+
+
+
+#!/bin/bash
+#recebe o caminho de um diretóriio e listar o conteúdo um a um. se for diretorio, escrever "(dir)" ao lado do diretorio.
+echo "Digite o diretorio"
+read dir
+if [ -d "$dir" ]
+then
+for coisa in $(ls $dir) do 
+echo "$coisa $([ -d$dir/ $coisa ] && echo "(dir)")"
+done
+else
+echo "Não existe" && exit
+fi
