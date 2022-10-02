@@ -47,6 +47,11 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
      SC(){ REFRESH;MARK;$S;$b;cur=`ARROW`;}
      ES(){ MARK;$e "VOLTAR AO MENU PRINCIPAL";$b;read;INIT;};INIT
      while [[ "$O" != " " ]]; do case $i in
-        0) S=M0;SC;if [[ $cur == enter ]];then R; /bin/bash 04_quest.sh;ES; fi;;
+        0) S=M0;SC;if [[ $cur == enter ]];
+            then R;
+            clear;
+            read -p "digite o numero: " n1;
+            bash 04_quest.sh "$n1";
+            ES; fi;;
         1) S=M1;SC;if [[ $cur == enter ]];then R; exit 1; fi;;
         esac;POS;done

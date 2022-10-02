@@ -11,7 +11,7 @@
            $E "   \xE2\x94\x82                                          \xE2\x94\x82"
            done
            MARK;TPUT 1 5
-           $E "               11º questão                 " ;UNMARK;
+           $E "              11º questão                 " ;UNMARK;
            TPUT 2 5
            $E "Desenvolva um script que realize as 
    |operações aritméticas básicas (soma, 

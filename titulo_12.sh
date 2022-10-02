@@ -11,7 +11,7 @@
            $E "   \xE2\x94\x82                                          \xE2\x94\x82"
            done
            MARK;TPUT 1 5
-           $E "               12º questão                 " ;UNMARK;
+           $E "              12º questão                 " ;UNMARK;
            TPUT 2 5
            $E "Desenvolva um script que apresente na tela
    |os usuários cadastrados no sistema e os 

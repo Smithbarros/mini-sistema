@@ -4,14 +4,7 @@
 # O maior dos números recebidos; 
 # O somatório dos números recebidos.
 
-read $1, $2;
-
-# 1º questão
-#Elaborar um script que receba dois números como parâmetros e como resultado da sua execução exiba as seguintes informações: 
-# O maior dos números recebidos; 
-# O somatório dos números recebidos.
-
-read $1, $2;
+read $1 $2;
 
 if [ $1 -lt $2 ]
 then
@@ -25,4 +18,4 @@ fi
 
 soma=$(($1+$2))
 
-echo "A soma eh igual $soma"
+echo "A soma é igual $soma"

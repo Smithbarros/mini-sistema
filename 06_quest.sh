@@ -26,8 +26,7 @@ while [ $opcao -eq $opcao ]; do
         1)
             echo "  Atualizacao:"
             df -h
-            read -p "
-Precione qualquer techa e volte ao menu"
+            read -p "Precione qualquer techa e volte ao menu"
             clear
             echo "$MENU"
          ;;

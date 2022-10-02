@@ -62,18 +62,18 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
      SC(){ REFRESH;MARK;$S;$b;cur=`ARROW`;}
      ES(){ MARK;$e "VOLTAR AO MENU PRINCIPAL";$b;read;INIT;};INIT
   while [[ "$O" != " " ]]; do case $i in
-        0) S=M0;SC;if [[ $cur == enter ]];then R; /bin/bash 01_quest.sh;ES;fi;;
-        1) S=M1;SC;if [[ $cur == enter ]];then R; /bin/bash 02_quest.sh;ES;fi;;
-        2) S=M2;SC;if [[ $cur == enter ]];then R; /bin/bash 03_quest.sh;ES;fi;;
-        3) S=M3;SC;if [[ $cur == enter ]];then R; /bin/bash 04_quest.sh;ES;fi;;
-        4) S=M4;SC;if [[ $cur == enter ]];then R; /bin/bash 05_quest.sh;ES;fi;;
-        5) S=M5;SC;if [[ $cur == enter ]];then R; /bin/bash 06_quest.sh;ES;fi;;
-        6) S=M6;SC;if [[ $cur == enter ]];then R; /bin/bash 07_quest.sh;ES;fi;;
-        7) S=M7;SC;if [[ $cur == enter ]];then R; /bin/bash 08_quest.sh;ES;fi;;
-        8) S=M8;SC;if [[ $cur == enter ]];then R; /bin/bash 09_quest.sh;ES;fi;;
-        9) S=M9;SC;if [[ $cur == enter ]];then R; /bin/bash 10_quest.sh;ES;fi;;
-        10) S=M10;SC;if [[ $cur == enter ]];then R; /bin/bash 11_quest.sh;ES;fi;;
-        11) S=M11;SC;if [[ $cur == enter ]];then R; /bin/bash 12_quest.sh;ES;fi;;
-        12) S=M12;SC;if [[ $cur == enter ]];then R; /bin/bash 13_quest.sh;ES;fi;;
-        13) S=M13;SC;if [[ $cur == enter ]];then R;exit 0;fi;;
+        0) S=M0;SC;if [[ $cur == enter ]];then R; bash titulo_1.sh;ES;fi;;
+        1) S=M1;SC;if [[ $cur == enter ]];then R; bash titulo_2.sh 2;ES;fi;;
+        2) S=M2;SC;if [[ $cur == enter ]];then R; bash titulo_3.sh 3;ES;fi;;
+        3) S=M3;SC;if [[ $cur == enter ]];then R; bash titulo_4.sh 4;ES;fi;;
+        4) S=M4;SC;if [[ $cur == enter ]];then R; bash titulo_5.sh 5;ES;fi;;
+        5) S=M5;SC;if [[ $cur == enter ]];then R; bash titulo_6.sh 6;ES;fi;;
+        6) S=M6;SC;if [[ $cur == enter ]];then R; bash titulo_7.sh 7;ES;fi;;
+        7) S=M7;SC;if [[ $cur == enter ]];then R; bash titulo_8.sh 8;ES;fi;;
+        8) S=M8;SC;if [[ $cur == enter ]];then R; bash titulo_9.sh 9;ES;fi;;
+        9) S=M9;SC;if [[ $cur == enter ]];then R; bash titulo_10.sh 10;ES;fi;;
+        10) S=M10;SC;if [[ $cur == enter ]];then R; bash titulo_11.sh 11;ES;fi;;
+        11) S=M11;SC;if [[ $cur == enter ]];then R; bash titulo_12.sh 12;ES;fi;;
+        12) S=M12;SC;if [[ $cur == enter ]];then R; bash titulo_13.sh 13;ES;fi;;
+        13) S=M13;SC;if [[ $cur == enter ]];then R; exit 1;fi;;
         esac;POS;done

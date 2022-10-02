@@ -11,7 +11,7 @@
            $E "   \xE2\x94\x82                                          \xE2\x94\x82"
            done
            MARK;TPUT 1 5
-           $E "               10º questão                 " ;UNMARK;
+           $E "              10º questão                 " ;UNMARK;
            TPUT 2 5
            $E "Desenvolva um script que recebe palavras 
    |interativamente e, a cada palavra 

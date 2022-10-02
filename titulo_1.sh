@@ -14,8 +14,10 @@
            $E "               1º questão                 " ;UNMARK;
            TPUT 2 5
            $E "Elaborar um script que receba dois números
-    |como parâmetros e como resultado da sua
-    |execução exiba as seguintes informações: " ;UNMARK;}
+   | como parâmetros e como resultado da sua
+   | execução exiba as seguintes informações:
+   |O maior dos números recebidos. 
+   |O somatório dos números recebidos." ;UNMARK;}
            i=0; CLEAR; CIVIS; NULL=/dev/null
    FOOT(){ MARK;TPUT 15 5
            $E " UP \xE2\x86\x91 \xE2\x86\x93 DOWN    ENTER - SELECT,NEXT       ";UNMARK;}
@@ -47,6 +49,13 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
      SC(){ REFRESH;MARK;$S;$b;cur=`ARROW`;}
      ES(){ MARK;$e "VOLTAR AO MENU PRINCIPAL";$b;read;INIT;};INIT
      while [[ "$O" != " " ]]; do case $i in
-        0) S=M0;SC;if [[ $cur == enter ]];then R; /bin/bash 01_quest.sh;ES; fi;;
+        0) S=M0;SC;if [[ $cur == enter ]];
+            then R; 
+            clear;
+            read -p "digite o primeiro numero: " n1
+            read -p "digite o segundo numero: " n2
+            bash 01_quest.sh "$n1" "$n2";
+            ES; fi;;
+        
         1) S=M1;SC;if [[ $cur == enter ]];then R; exit 1; fi;;
         esac;POS;done
