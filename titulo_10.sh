@@ -47,7 +47,7 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
            UNMARK; M$before; M$after; fi; j=$i; UNMARK; M$before; M$after;}
      INIT(){ R;HEAD;FOOT;MENU;}
      SC(){ REFRESH;MARK;$S;$b;cur=`ARROW`;}
-     ES(){ MARK;$e "VOLTAR AO MENU PRINCIPAL";$b;read;INIT;};INIT
+     ES(){ MARK;$e "Voltar ao menu";$b;read;INIT;};INIT
      while [[ "$O" != " " ]]; do case $i in
         0) S=M0;SC;if [[ $cur == enter ]];then R; /bin/bash 10_quest.sh;ES; fi;;
         1) S=M1;SC;if [[ $cur == enter ]];then R; exit 1; fi;;

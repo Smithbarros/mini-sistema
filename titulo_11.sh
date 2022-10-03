@@ -14,10 +14,12 @@
            $E "              11º questão                 " ;UNMARK;
            TPUT 2 5
            $E "Desenvolva um script que realize as 
-   |operações aritméticas básicas (soma, 
-   |subtração, divisão e multiplicação),
-   |recebendo a operação e os operadores
-   |como parâmetros. " ;UNMARK;}
+   |operações aritméticas básicas,recebendo a 
+   |operação e os operadores como parâmetros. 
+   | - soma (+)
+   | - subtração (-)
+   | - multiplicação (x)
+   | - divisão (/) " ;UNMARK;}
            i=0; CLEAR; CIVIS; NULL=/dev/null
    FOOT(){ MARK;TPUT 15 5
            $E " UP \xE2\x86\x91 \xE2\x86\x93 DOWN    ENTER - SELECT,NEXT       ";UNMARK;}
@@ -47,8 +49,15 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
            UNMARK; M$before; M$after; fi; j=$i; UNMARK; M$before; M$after;}
      INIT(){ R;HEAD;FOOT;MENU;}
      SC(){ REFRESH;MARK;$S;$b;cur=`ARROW`;}
-     ES(){ MARK;$e "VOLTAR AO MENU PRINCIPAL";$b;read;INIT;};INIT
+     ES(){ MARK;$e "Voltar ao menu";$b;read;INIT;};INIT
      while [[ "$O" != " " ]]; do case $i in
-        0) S=M0;SC;if [[ $cur == enter ]];then R; /bin/bash 11_quest.sh;ES; fi;;
+        0) S=M0;SC;if [[ $cur == enter ]];
+            then R; 
+            clear;
+            read -p "digite o primeiro numero: " n1
+            read -p "Operação desejada: " o
+            read -p "digite o segundo numero: " n2
+            bash 11_quest.sh "$n1" "$o" "$n2";
+            ES; fi;;
         1) S=M1;SC;if [[ $cur == enter ]];then R; exit 1; fi;;
         esac;POS;done
